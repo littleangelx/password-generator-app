@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap");
+
+body {
+  background-color: #08070b;
+  font-family: "JetBrains Mono", monospace;
+  box-sizing: border-box;
+  color: #e6e5ea;
+}
+
+.app {
+  width: 540px;
+  height: 695px;
+  position: absolute;
+  top: calc(50% - 695px / 2);
+  left: calc(50% - 540px / 2);
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}
+
+h1 {
+  color: #817d92;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.password {
+  width: 540px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #24232c;
+  box-sizing: border-box;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+input[type="text"] {
+  width: 380px;
+  background-color: #24232c;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  color: rgba(230, 229, 234, 0.25);
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.copied {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #a4ffaf;
+  padding-right: 16px;
+}
+
+.copy {
+  cursor: pointer;
+  margin-right: 32px;
+}
+
+.password-setup {
+  width: 540px;
+  height: 528px;
+  background-color: #24232c;
+  color: #e6e5ea;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+  padding-top: 34px;
+  padding-left: 32px;
+  box-sizing: border-box;
+}
+
+.rules-section {
+  height: 152px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.main {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  visibility: hidden;
+}
+
+/* Creating a custom checkbox
+based on demand */
+.custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #24232c;
+  border: 2px solid #e6e5ea;
+}
+
+/* Specify the background color to be
+shown when hovering over checkbox */
+.main:hover input ~ .custom-checkbox {
+  background-color: #24232c;
+}
+
+/* Specify the background color to be
+shown when checkbox is active */
+.main input:active ~ .custom-checkbox {
+  background-color: #a4ffaf;
+}
+
+/* Specify the background color to be
+shown when checkbox is checked */
+.main input:checked ~ .custom-checkbox {
+  background-color: #a4ffaf;
+  border: none;
+}
+
+/* Checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.custom-checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Display checkmark when checked */
+.main input:checked ~ .custom-checkbox:after {
+  display: block;
+}
+
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degree and 
+showing only two border to make it look
+like a tickmark */
+.main .custom-checkbox:after {
+  left: 6.5px;
+  bottom: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #18171f;
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* .rule input {
+  width: 20px;
+  height: 20px;
+  margin-right: 24px;
+  vertical-align: middle;
+}
+
+.rule label {
+  vertical-align: middle;
+} */
+
+/* input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #24232c;
+  fill: #24232c;
+  /* border: 2px solid #e6e5ea; */
+/* } */
+
+input[type="checkbox"]:checked {
+  accent-color: #a4ffaf !important;
+}
+
+.strength {
+  width: 476px;
+  height: 72px;
+  background-color: #18171f;
+  display: flex;
+  justify-content: space-between;
+}
+
+.strength p {
+  font-weight: 700;
+  font-size: 18px;
+  color: #817d92;
+  margin-top: 25px;
+  margin-left: 32px;
+  text-transform: uppercase;
+}
+
+.strength-section {
+  display: flex;
+  gap: 15.5px;
+  margin-right: 21px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password-strength {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.strength-bars {
+  width: 63.5px;
+  height: 28px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.strength-bar {
+  width: 10px;
+  height: 28px;
+  border: 1px solid #fff;
+}
+
+button {
+  width: 476px;
+  height: 65px;
+  background-color: #a4ffaf;
+  color: #24232c;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #24232c;
+  color: #a4ffaf;
+}
+
+button img {
+  width: 11.1px;
+  height: 12px;
+  padding-left: 24px;
+}
+
+@media (max-width: 576px) {
+  .app {
+    width: 343px;
+    left: calc(50% - 343px / 2);
+  }
+  .password-section {
+    width: 343px;
+  }
+  .password {
+    width: 343px;
+  }
+  .password-setup {
+    width: 343px;
+    padding-left: 16px;
+  }
+
+  .strength {
+    width: 311px;
+  }
+  .strength-bars {
+    left: 231px;
+  }
+  button {
+    width: 311px;
+  }
+}
