@@ -160,25 +160,6 @@ like a tickmark */
   transform: rotate(45deg);
 }
 
-/* .rule input {
-  width: 20px;
-  height: 20px;
-  margin-right: 24px;
-  vertical-align: middle;
-}
-
-.rule label {
-  vertical-align: middle;
-} */
-
-/* input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  accent-color: #24232c;
-  fill: #24232c;
-  /* border: 2px solid #e6e5ea; */
-/* } */
-
 input[type="checkbox"]:checked {
   accent-color: #a4ffaf !important;
 }
@@ -255,24 +236,62 @@ button img {
     width: 343px;
     left: calc(50% - 343px / 2);
   }
+  h1 {
+    font-size: 16px;
+    line-height: normal;
+  }
   .password-section {
     width: 343px;
   }
   .password {
     width: 343px;
+    padding-left: 16px;
+    padding-right: 15.5px;
+  }
+  input[type="text"] {
+    width: 220px;
+    font-size: 18px;
+    line-height: normal;
+  }
+  .copied {
+    font-size: 15.5px;
+  }
+  .copy {
+    padding-right: 15.5px;
+    width: 17.5px;
+    height: 20px;
   }
   .password-setup {
     width: 343px;
     padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 16px;
   }
-
+  .rules-section {
+    gap: 16px;
+  }
+  .main {
+    font-size: 16px;
+  }
   .strength {
     width: 311px;
+    height: 56px;
   }
-  .strength-bars {
-    left: 231px;
+  .strength p {
+    font-size: 16px;
+    margin-top: 17px;
+    margin-left: 16px;
+  }
+  .strength-section {
+    margin-right: 14px;
+  }
+
+  .password-strength {
+    font-size: 18px;
   }
   button {
     width: 311px;
+    height: 56px;
+    font-size: 16px;
   }
 }
